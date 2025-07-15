@@ -272,6 +272,75 @@ color: #0c2d51;
 font-size: 0.9rem;
 color: #666;
 }
+.enrollment {
+padding: 80px 20px;
+background: #f8f8f8;
+}
+.enrollment-container {
+max-width: 1200px;
+margin: 0 auto;
+}
+.enrollment h2 {
+font-family: 'Playfair Display', serif;
+font-size: 2rem;
+text-align: center;
+margin-bottom: 40px;
+color: #0c2d51;
+}
+.academic-paths {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: center;
+}
+.academic-path {
+flex: 1;
+min-width: 300px;
+height: 400px;
+position: relative;
+overflow: hidden;
+transition: transform 0.3s;
+}
+.academic-path:hover {
+transform: translateY(-5px);
+}
+.academic-bg {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-size: cover;
+background-position: center;
+}
+.academic-overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+}
+.academic-content {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+padding: 20px;
+color: white;
+z-index: 2;
+}
+.academic-content h3 {
+font-family: 'Playfair Display', serif;
+font-size: 1.8rem;
+margin-bottom: 15px;
+}
+.academic-text {
+background: white;
+color: #333;
+padding: 15px;
+margin-top: 15px;
+}
 h1, h2, h3, h4, h5, h6 {
 font-family: 'Playfair Display', serif;
 }
@@ -443,6 +512,9 @@ width: 100%;
 .quick-link-box {
 min-width: 100%;
 }
+.academic-path {
+min-width: 100%;
+}
 .footer-bottom-content {
 flex-direction: column;
 text-align: center;
@@ -478,7 +550,6 @@ display: none !important;
 <a href="#">About</a>
 <a href="#">Academics</a>
 <a href="#">Admission</a>
-
 </div>
 </header>
 </div>
@@ -525,6 +596,37 @@ display: none !important;
 <div class="quick-link-content">
 <h3>School Life</h3>
 <p>View important dates, holidays, and events throughout the academic year. <span style="text-decoration:underline;color: #1b83d1;">Learn more</span></p>
+</div>
+</a>
+</div>
+</div>
+</section>
+<section class="enrollment">
+<div class="enrollment-container">
+<h2>Academic Paths</h2>
+<div class="academic-paths">
+<a href="#" class="academic-path">
+<div class="academic-bg" style="background-image: url('https://res.cloudinary.com/dmr1urhow/image/upload/v1752592847/3_20250715_161924_0002-min_bedqqx.jpg')"></div>
+<div class="academic-overlay"></div>
+<div class="academic-content">
+<h3>Nursery</h3>
+<div class="academic-text">Spark a love for learning through play-based experiences that lay the foundation for future academic success.</div>
+</div>
+</a>
+<a href="#" class="academic-path">
+<div class="academic-bg" style="background-image: url('https://res.cloudinary.com/dmr1urhow/image/upload/v1752592847/2_20250715_161924_0001-min_h1hozm.jpg')"></div>
+<div class="academic-overlay"></div>
+<div class="academic-content">
+<h3>Primary</h3>
+<div class="academic-text">Cultivate critical thinking, creativity, and problem-solving skills within a rigorous British curriculum tailored to young minds.</div>
+</div>
+</a>
+<a href="#" class="academic-path">
+<div class="academic-bg" style="background-image: url('https://res.cloudinary.com/dmr1urhow/image/upload/v1752592846/1_20250715_161924_0000-min_bj04fr.jpg')"></div>
+<div class="academic-overlay"></div>
+<div class="academic-content">
+<h3>Junior Secondary School</h3>
+<div class="academic-text">Empower your child to excel in diverse subjects and discover their passions through our engaging and challenging secondary program.</div>
 </div>
 </a>
 </div>
