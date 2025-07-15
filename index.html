@@ -267,6 +267,7 @@ font-family: 'Playfair Display', serif;
 font-size: 1.25rem;
 margin-bottom: 8px;
 color: #0c2d51;
+position: relative;
 }
 .quick-link-content p {
 font-size: 0.9rem;
@@ -299,6 +300,40 @@ font-size: 1.125rem;
 color: #666;
 line-height: 1.6;
 margin-bottom: 30px;
+}
+.quoter {
+display: flex;
+align-items: center;
+gap: 20px;
+margin-top: 30px;
+}
+.quoter-img {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+overflow: hidden;
+}
+.quoter-img img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.quoter-info {
+display: flex;
+flex-direction: column;
+}
+.quoter-name {
+font-weight: 600;
+font-size: 0.9rem;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+.quoter-position {
+font-weight: 500;
+font-size: 0.8rem;
+text-transform: uppercase;
+letter-spacing: 1px;
+color: #666;
 }
 .image-collage {
 flex: 1;
@@ -395,6 +430,62 @@ color: #333;
 padding: 15px;
 margin-top: 15px;
 }
+.founder-welcome {
+padding: 80px 20px;
+background: #f8f8f8;
+}
+
+.founder-container {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+flex-wrap: wrap;
+gap: 40px;
+align-items: center;
+}
+
+.founder-image {
+flex: 1;
+min-width: 300px;
+align-self: flex-start;
+}
+
+.founder-image img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 4px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.founder-message {
+flex: 1;
+min-width: 300px;
+}
+
+.founder-message h2 {
+font-family: 'Montserrat', sans-serif;
+font-size: 1.5rem;
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-bottom: 25px;
+color: #0c2d51;
+font-weight: 600;
+}
+
+.founder-message p {
+font-size: 1.125rem;
+color: #666;
+line-height: 1.6;
+margin-bottom: 20px;
+}
+
+.founder-message .signature {
+font-weight: 500;
+font-style: italic;
+margin-top: 30px;
+}
+
 h1, h2, h3, h4, h5, h6 {
 font-family: 'Playfair Display', serif;
 }
@@ -576,11 +667,14 @@ text-align: center;
 .mission-container {
 flex-direction: column;
 }
-.mission-content{
+.mission-content, .founder-message{
 order: 1;
 }
-.image-collage{
+.image-collage, .founder-image{
 order: 2;
+}
+.founder-container {
+flex-direction: column;
 }
 }
 @media (min-width: 769px) {
@@ -624,7 +718,7 @@ display: none !important;
 <div class="hero-overlay"></div>
 <div class="hero-content">
 <h1>Welcome to Springston International School</h1>
-<p>Inspiring our children to be passionate lifelong learners through a curriculum with pedagogical integrity, which allows them to always inquire, innovate, and contribute in meaningful way to the society.</p>
+<p>Inspiring our children to be passionate lifelong learners through a curriculum with pedagogical integrity, which allows them to always inquire, innovate, and contribute in meaningful ways to the society.</p>
 <div class="hero-buttons">
 <a href="#" class="cta-button">Enroll now</a>
 <a href="#" class="cta-button">View academics</a>
@@ -695,6 +789,24 @@ display: none !important;
 </div>
 </div>
 </section>
+<section class="founder-welcome">
+<div class="container">
+<div class="founder-container">
+<div class="founder-image">
+<img src="https://res.cloudinary.com/dmr1urhow/image/upload/v1752490905/7d267182-62f7-4688-a572-f958837725e8-768x765_ne23w6.jpg" alt="Mme. Doris Jennifer">
+</div>
+<div class="founder-message">
+<h2>FOUNDER'S WELCOME</h2>
+<p><strong>Welcome to Springston International School.</strong></p><p>It is my great pleasure to welcome you to Springston International School — a place where children are nurtured not only to learn but to flourish.</p>
+<p>My name is Mme. Doris Jennifer, and I wear several hats that are close to my heart: I am a mother, a licensed medical practitioner, a certified childcare business manager, and an educator with a passion for helping children grow into confident, compassionate individuals. Springston International School was born at the intersection of these roles — a reflection of my personal journey and professional mission.</p>
+<p>As a mother, I understand the courage it takes to entrust your child to someone else’s care. As a nurse, I value the deep connection between a child’s health, emotional well-being, and their ability to thrive. And as an educator, I believe in creating a safe, engaging, and supportive environment where each child is encouraged to explore, express, and grow.
+<p>At Springston, we aim to do more than teach — we strive to build character, curiosity, and confidence. Our approach blends academic excellence with emotional intelligence, play-based discovery, and personalized care. Every member of our team shares a deep commitment to guiding children through these foundational years with love, professionalism, and integrity.</p>
+<p>Whether your child is just beginning their learning journey or is already finding their path, we would be honored to walk alongside you. Thank you for considering Springston International School. And wherever your child’s path may lead, I sincerely hope it is filled with joy, discovery, and success.</p>
+<p class="signature">Warmly,<br>Mme. Doris Jennifer<br>Founder & Director<br>Springston International School</p>
+</div>
+</div>
+</div>
+</section>
 <section class="mission">
 <div class="container">
 <div class="mission-container">
@@ -710,8 +822,17 @@ display: none !important;
 </div>
 </div>
 <div class="mission-content">
-<h2>Our mission is to prepare your children for success</h2>
-<p>Inspiring our children to be passionate lifelong learners through a curriculum with pedagogical integrity, which allows them to always inquire, innovate, and contribute in meaningful way to the society.</p>
+<h2>Our Mission</h2>
+<p>"Inspiring our children to be passionate lifelong learners through a curriculum with pedagogical integrity, which allows them to always inquire, innovate, and contribute in meaningful way to the society."</p>
+<div class="quoter">
+<div class="quoter-img">
+<img src="https://res.cloudinary.com/dmr1urhow/image/upload/v1752597531/20250715_173811_0000-min_gv7zuy.jpg" alt="Mme. Doris Jennifer">
+</div>
+<div class="quoter-info">
+<div class="quoter-name">Mme. Doris Jennifer</div>
+<div class="quoter-position">Founder</div>
+</div>
+</div>
 </div>
 </div>
 </div>
