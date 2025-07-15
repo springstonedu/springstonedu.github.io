@@ -272,9 +272,63 @@ color: #0c2d51;
 font-size: 0.9rem;
 color: #666;
 }
-.enrollment {
+.mission {
 padding: 80px 20px;
 background: #f8f8f8;
+}
+.mission-container {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+flex-wrap: wrap;
+gap: 40px;
+align-items: center;
+}
+.mission-content {
+flex: 1;
+min-width: 300px;
+}
+.mission-content h2 {
+font-family: 'Playfair Display', serif;
+font-size: 2rem;
+margin-bottom: 20px;
+color: #0c2d51;
+}
+.mission-content p {
+font-size: 1.125rem;
+color: #666;
+line-height: 1.6;
+margin-bottom: 30px;
+}
+.image-collage {
+flex: 1;
+min-width: 300px;
+max-height: 400px;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(2, 1fr);
+gap: 15px;
+}
+.image-collage-item {
+position: relative;
+overflow: hidden;
+}
+.image-collage-item:first-child {
+grid-column: 1 / 2;
+grid-row: 1 / 3;
+}
+.image-collage-item img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.3s;
+}
+.image-collage-item:hover img {
+transform: scale(1.05);
+}
+.enrollment {
+padding: 80px 20px;
+background: #edeef2;
 }
 .enrollment-container {
 max-width: 1200px;
@@ -519,6 +573,15 @@ min-width: 100%;
 flex-direction: column;
 text-align: center;
 }
+.mission-container {
+flex-direction: column;
+}
+.mission-content{
+order: 1;
+}
+.image-collage{
+order: 2;
+}
 }
 @media (min-width: 769px) {
 .mobile-menu {
@@ -632,6 +695,27 @@ display: none !important;
 </div>
 </div>
 </section>
+<section class="mission">
+<div class="container">
+<div class="mission-container">
+<div class="image-collage">
+<div class="image-collage-item">
+<img src="https://res.cloudinary.com/dmr1urhow/image/upload/v1752596723/4_20250715_172421_0000-min_yxn68j.jpg" alt="Students learning">
+</div>
+<div class="image-collage-item">
+<img src="https://res.cloudinary.com/dmr1urhow/image/upload/v1752596723/5_20250715_172421_0001-min_zlhkor.jpg" alt="Classroom activity">
+</div>
+<div class="image-collage-item">
+<img src="https://res.cloudinary.com/dmr1urhow/image/upload/v1752596723/6_20250715_172421_0002-min_hs0vpl.jpg" alt="School building">
+</div>
+</div>
+<div class="mission-content">
+<h2>Our mission is to prepare your children for success</h2>
+<p>Inspiring our children to be passionate lifelong learners through a curriculum with pedagogical integrity, which allows them to always inquire, innovate, and contribute in meaningful way to the society.</p>
+</div>
+</div>
+</div>
+</section>
 </main>
 <footer>
 <div class="container">
@@ -642,7 +726,7 @@ display: none !important;
 <p class="footer-paragraph">Choosing the right school for your child is a big decision and we're here to support you. Let's talk about how Springston can help your child grow, at a regulated pace, in the right environment.</p>
 <div class="contact-item">
 <div class="contact-icon">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0l-11 6v12.131l11 5.869 11-5.869v-12.066l-11-6.065zm-9 8.23l8 4.363v8.607l-8-4.268v-8.702zm10 12.97v-8.6l8-4.269v8.6l-8 4.269z"/></svg>
 </div>
 <div class="contact-details">
 <div class="contact-label">Address</div>
