@@ -504,16 +504,133 @@ background: rgba(235, 158, 74, 0.1) !important;
 .faq-answer {
 border-top: 1px solid #e0e0e0;
 }
-@media (max-width: 768px) {
-.faq-question {
-font-size: 1rem !important;
-padding: 15px !important;
+.springston-video {
+position: relative;
+width: 100%;
+height: 600px;
+margin: 80px 0;
 }
-.faq-answer div {
-padding: 15px !important;
+.video-background {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-size: cover;
+background-position: center;
 }
+.video-overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.55);
 }
-
+.video-content {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+color: white;
+width: 100%;
+max-width: 800px;
+padding: 20px;
+}
+.play-button {
+width: 80px;
+height: 80px;
+border: 2px solid white;
+border-radius: 50%;
+background: transparent;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto 30px;
+cursor: pointer;
+transition: all 0.3s;
+}
+.play-button:hover {
+background: rgba(255,255,255,0.2);
+}
+.play-button svg {
+width: 30px;
+height: 30px;
+}
+.video-content h2 {
+font-family: 'Playfair Display', serif;
+font-size: 2.5rem;
+margin-bottom: 20px;
+line-height: 1.3;
+}
+.video-content p {
+font-size: 1.125rem;
+margin-bottom: 30px;
+line-height: 1.6;
+max-width: 600px;
+margin-left: auto;
+margin-right: auto;
+}
+.video-cta {
+background: transparent;
+color: white;
+padding: 15px 30px;
+border: 2px solid white;
+text-transform: uppercase;
+font-family: 'Montserrat', sans-serif;
+font-weight: 600;
+letter-spacing: 1px;
+font-size: 1rem;
+cursor: pointer;
+transition: all 0.3s;
+}
+.video-cta:hover {
+background: rgba(255,255,255,0.1);
+}
+.video-modal {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.8);
+z-index: 1000;
+align-items: center;
+justify-content: center;
+}
+.video-modal.active {
+display: flex;
+}
+.modal-content {
+position: relative;
+width: 90%;
+max-width: 1000px;
+}
+.close-modal {
+position: absolute;
+top: -40px;
+right: 0;
+background: white;
+border: none;
+width: 30px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+z-index: 1001;
+}
+.close-modal svg {
+width: 16px;
+height: 16px;
+}
+.modal-content video {
+width: 100%;
+height: auto;
+max-height: 80vh;
+}
 h1, h2, h3, h4, h5, h6 {
 font-family: 'Playfair Display', serif;
 }
@@ -704,6 +821,30 @@ order: 2;
 .founder-container {
 flex-direction: column;
 }
+.faq-question {
+font-size: 1rem !important;
+padding: 15px !important;
+}
+.faq-answer div {
+padding: 15px !important;
+}
+.springston-video {
+height: 500px;
+}
+.video-content h2 {
+font-size: 1.8rem;
+}
+.video-content p {
+font-size: 1rem;
+}
+.play-button {
+width: 60px;
+height: 60px;
+}
+.play-button svg {
+width: 20px;
+height: 20px;
+}
 }
 @media (min-width: 769px) {
 .mobile-menu {
@@ -866,7 +1007,21 @@ display: none !important;
 </div>
 </div>
 </section>
-</main>
+<section class="springston-video">
+<div class="video-background" style="background-image: url('https://res.cloudinary.com/dmr1urhow/image/upload/v1752659576/activity1-768x576-min_i5dlmu.jpg')">
+<div class="video-overlay"></div>
+<div class="video-content">
+<button class="play-button">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+<path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z"/>
+</svg>
+</button>
+<h2>Watch what's a day in classroom like</h2>
+<p>Experience the vibrant learning environment and see how our students engage with our curriculum and teachers.</p>
+<button class="video-cta">Watch Video</button>
+</div>
+</div>
+</section>
 <section class="faq-section" style="background: #f8f8f8; padding: 80px 20px;">
 <div class="container">
 <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; text-align: center; margin-bottom: 40px; color: #0c2d51;">Frequently Asked Questions</h2>
@@ -952,7 +1107,21 @@ display: none !important;
 </div>
 </div>
 </section>
+<div class="video-modal">
+<div class="modal-content">
+<button class="close-modal">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#0c2d51">
+<path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/>
+</svg>
+</button>
+<video controls>
+<source src="https://res.cloudinary.com/dmr1urhow/video/upload/v1752660530/videoplayback_2_u7vjsn.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+</div>
 
+</main>
 <footer>
 <div class="container">
 <div class="footer-content">
@@ -1058,6 +1227,22 @@ answer.style.maxHeight = '0';
 icon.style.transform = 'rotate(0)';
 }
 });
+});
+document.querySelector('.play-button').addEventListener('click', openModal);
+document.querySelector('.video-cta').addEventListener('click', openModal);
+document.querySelector('.close-modal').addEventListener('click', closeModal);
+function openModal() {
+document.querySelector('.video-modal').classList.add('active');
+document.querySelector('.video-modal video').play();
+}
+function closeModal() {
+document.querySelector('.video-modal').classList.remove('active');
+document.querySelector('.video-modal video').pause();
+}
+document.querySelector('.video-modal').addEventListener('click', function(e) {
+if (e.target === this) {
+closeModal();
+}
 });
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 </script>
