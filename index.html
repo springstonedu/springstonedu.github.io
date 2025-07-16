@@ -610,21 +610,26 @@ max-width: 1000px;
 }
 .close-modal {
 position: absolute;
-top: -40px;
+top: -50px;
 right: 0;
 background: white;
 border: none;
-width: 30px;
-height: 30px;
+padding: 10px 15px;
 display: flex;
 align-items: center;
-justify-content: center;
+gap: 8px;
 cursor: pointer;
 z-index: 1001;
+font-family: 'Montserrat', sans-serif;
+text-transform:uppercase;
+letter-spacing: 1px;
+font-size: 16px;
+font-weight: 600;
+color: #0c2d51;
 }
 .close-modal svg {
-width: 16px;
-height: 16px;
+width: 12px;
+height: 12px;
 }
 .modal-content video {
 width: 100%;
@@ -1110,6 +1115,7 @@ display: none !important;
 <div class="video-modal">
 <div class="modal-content">
 <button class="close-modal">
+<span>Close</span>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#0c2d51">
 <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/>
 </svg>
