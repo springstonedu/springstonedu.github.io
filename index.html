@@ -16,6 +16,9 @@ html, body {
 height: 100%;
 overflow-x: hidden;
 }
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+}
 body {
 background: white;
 max-width: 1440px;
@@ -636,8 +639,160 @@ width: 100%;
 height: auto;
 max-height: 80vh;
 }
-h1, h2, h3, h4, h5, h6 {
+.academic-programs {
+padding: 80px 20px;
+background: white;
+}
+.academic-programs h2{
+font-family: 'Playfair Display', serif; 
+font-size: 2rem; 
+text-align: center; 
+margin-bottom: 40px; 
+color: #0c2d51;
+}
+.programs-container {
+display: flex;
+flex-wrap: wrap;
+gap: 30px;
+justify-content: center;
+}
+.program-card {
+flex: 1;
+min-width: 300px;
+max-width: 400px;
+background: white;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+transition: transform 0.3s;
+}
+.program-card:hover {
+transform: translateY(-10px);
+}
+.program-card:hover .program-image img {
+transform: scale(1.1);
+}
+.program-image {
+height: 250px;
+overflow: hidden;
+}
+.program-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.5s;
+}
+.program-content {
+padding: 25px;
+}
+.program-content h3 {
 font-family: 'Playfair Display', serif;
+font-size: 1.5rem;
+margin-bottom: 15px;
+color: #0c2d51;
+}
+.program-content p {
+color: #666;
+line-height: 1.6;
+margin-bottom: 20px;
+}
+.metrics {
+padding: 80px 20px;
+background: #fff;
+}
+.metrics-heading {
+font-family: 'Playfair Display', serif;
+font-size: 2rem;
+text-align: center;
+margin-bottom: 40px;
+color: #0c2d51;
+}
+.metrics-grid {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: center;
+margin-bottom: 40px;
+}
+.metric-box {
+flex: 1;
+min-width: 200px;
+text-align: center;
+padding: 30px;
+background: white;
+}
+.metric-number {
+font-family: 'Montserrat', sans-serif;
+font-size: 2.5rem;
+color: #eb9e4a;
+margin-bottom: 10px;
+}
+.metric-label {
+color: #666;
+font-weight: 500;
+}
+.metrics-cta {
+text-align: center;
+max-width: 400px;
+margin: 0 auto;
+}
+.reviews {
+background: #edeef2;
+padding: 80px 20px;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.reviews h2 {
+font-family: 'Playfair Display', serif;
+font-size: 2rem;
+text-align: center;
+margin-bottom: 40px;
+color: #0c2d51;
+}
+
+.reviews-container {
+display: flex;
+flex-wrap: wrap;
+gap: 30px;
+justify-content: center;
+}
+
+.review-card {
+flex: 1;
+min-width: 250px;
+max-width: 300px;
+background: white;
+padding: 30px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.review-card svg {
+margin-bottom: 20px;
+fill: #eb9e4a;
+}
+
+.review-card p {
+font-style: italic;
+color: #666;
+line-height: 1.6;
+margin-bottom: 20px;
+}
+
+.reviewer-info {
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.reviewer-name {
+font-weight: 600;
+color: #0c2d51;
+}
+
+.reviewer-role {
+font-size: 0.8rem;
+color: #666;
 }
 footer {
 background: #0c2d51;
@@ -850,6 +1005,12 @@ height: 60px;
 width: 20px;
 height: 20px;
 }
+.program-card {
+min-width: 100%;
+}
+.metric-box {
+min-width: 100%;
+}
 }
 @media (min-width: 769px) {
 .mobile-menu {
@@ -869,7 +1030,7 @@ display: none !important;
 <a href="#">About</a>
 <a href="#">Academics</a>
 <a href="#">Admission</a>
-<a href="#" class="cta-button" style="font-weight: 600;">Enroll now <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#f6d769"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg></a>
+<a href="#" class="cta-button" style="font-weight: 600;">Enroll now <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#0c2d51"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg></a>
 </nav>
 <div class="menu-icon">
 <span></span>
@@ -1024,6 +1185,114 @@ display: none !important;
 <h2>Watch what's a day in classroom like</h2>
 <p>Experience the vibrant learning environment and see how our students engage with our curriculum and teachers.</p>
 <button class="video-cta">Watch Video</button>
+</div>
+</div>
+</section>
+<section class="academic-programs">
+<div class="container">
+<h2>Academic Programs</h2>
+<div class="programs-container">
+<div class="program-card">
+<div class="program-image" style="height: 250px; overflow: hidden;">
+<img src="https://res.cloudinary.com/dmr1urhow/image/upload/v1752667049/alex-knight-2EJCSULRwC8-unsplash-min_im7e7l.jpg" alt="TECH & ICT">
+</div>
+<div class="program-content">
+<h3>Tech & ICT</h3>
+<p>Our technology program equips students with essential digital skills, coding fundamentals, and innovative thinking to thrive in the digital age.</p>
+</div>
+</div>
+<div class="program-card">
+<div class="program-image" style="height: 250px; overflow: hidden;">
+<img src="https://res.cloudinary.com/dmr1urhow/image/upload/v1752667050/aedrian-salazar-CF-WBZlYu5A-unsplash-min_nvylqz.jpg" alt="VOCATIONAL EXPOSURE">
+</div>
+<div class="program-content">
+<h3>Vocational Exposure</h3>
+<p>Practical career exploration through hands-on experiences in various professions, helping students discover their passions and potential career paths.</p>
+</div>
+</div>
+
+<div class="program-card">
+<div class="program-image" style="height: 250px; overflow: hidden;">
+<img src="https://res.cloudinary.com/dmr1urhow/image/upload/v1752667050/kane-reinholdtsen-LETdkk7wHQk-unsplash-min_giurnd.jpg" alt="PUBLIC SPEAKING & CONFIDENCE-BUILDING">
+</div>
+<div class="program-content">
+<h3>Public Speaking & Confidence-Building</h3>
+<p>Develop essential communication skills and self-confidence through structured exercises, presentations, and performance opportunities.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="metrics">
+<div class="container">
+<h2 class="metrics-heading">The Numbers Say It All</h2>
+<div class="metrics-grid">
+<div class="metric-box">
+<h3 class="metric-number">150</h3>
+<p class="metric-label">Student Population</p>
+</div>
+<div class="metric-box">
+<h3 class="metric-number">5</h3>
+<p class="metric-label">Years of Experience</p>
+</div>
+<div class="metric-box">
+<h3 class="metric-number">25+</h3>
+<p class="metric-label">Graduates</p>
+</div>
+<div class="metric-box">
+<h3 class="metric-number">10</h3>
+<p class="metric-label">Average Class Size</p>
+</div>
+</div>
+<div class="metrics-cta">
+<a href="#" class="cta-button">Enroll now <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#0c2d51"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg></a>
+</div>
+</div>
+</section>
+<section class="reviews">
+<div class="container">
+<h2>What Parents Are Saying</h2>
+<div class="reviews-container">
+<div class="review-card">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+</svg>
+<p>"Being in Benin, we wanted a school that wouldn't isolate our daughter. At Springston, she's learning languages, using technology, and—most importantly—she's happy."</p>
+<div class="reviewer-info">
+<div class="reviewer-name">Mr. Ernest</div>
+<div class="reviewer-role">Parent of Class 4 pupil</div>
+</div>
+</div>
+<div class="review-card">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+</svg>
+<p>"My son is quiet—he often got overlooked in bigger schools. Here, his teachers took the time to understand him. Now he's reading better, asking questions, even helping his siblings."</p>
+<div class="reviewer-info">
+<div class="reviewer-name">Mrs Okoye Valentine</div>
+<div class="reviewer-role">Parent of Form 2 Student</div>
+</div>
+</div>
+<div class="review-card">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+</svg>
+<p>"Our daughter comes back home with a big smile. She knows her teachers' names and often talks about her fruitful school. We thank the school for nurturing our daughter into a bold and happy kid."</p>
+<div class="reviewer-info">
+<div class="reviewer-name">Mr. & Mrs. Nwosu</div>
+<div class="reviewer-role">Parent of Nursery pupil</div>
+</div>
+</div>
+<div class="review-card">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+</svg>
+<p>"Our child enjoys the extracurricular activities, the games, the fun sporting events. He loves the attention the teachers give to him and we are grateful he is improving in maths, his weakest subject."</p>
+<div class="reviewer-info">
+<div class="reviewer-name">Mrs Nwaorisa Chibueze</div>
+<div class="reviewer-role">Parent of Class 6 Student</div>
+</div>
+</div>
 </div>
 </div>
 </section>
