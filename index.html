@@ -192,7 +192,6 @@ margin-bottom: 20px;
 font-size: 1.125rem;
 margin-bottom: 30px;
 line-height: 1.6;
-animation-delay: 0.3s;
 }
 .hero-buttons {
 display: flex;
@@ -207,9 +206,6 @@ letter-spacing: 1px;
 padding: 15px 30px;
 text-align: center;
 }
-.hero-buttons .cta-button:first-child {
-animation-delay: 0.6s;
-}
 .hero-buttons .cta-button:first-child:hover {
 background: #eb9e4a;
 }
@@ -217,7 +213,6 @@ background: #eb9e4a;
 background: transparent;
 border: 2px solid white;
 color: white;
-animation-delay: 0.8s;
 }
 .hero-buttons .cta-button:last-child:hover {
 background: rgba(255,255,255,0.1);
@@ -275,7 +270,7 @@ color: #666;
 }
 .mission {
 padding: 80px 20px;
-background: #f8f8f8;
+background: #fff;
 }
 .mission-container {
 max-width: 1200px;
@@ -432,7 +427,7 @@ margin-top: 15px;
 }
 .founder-welcome {
 padding: 80px 20px;
-background: #f8f8f8;
+background: #fff;
 }
 
 .founder-container {
@@ -484,6 +479,39 @@ margin-bottom: 20px;
 font-weight: 500;
 font-style: italic;
 margin-top: 30px;
+}
+.faq-container {
+max-width: 800px;
+margin: 0 auto;
+}
+.faq-item {
+margin-bottom: 15px;
+border: 1px solid #e0e0e0;
+transition: all 0.3s;
+}
+.faq-item.active {
+border-color: #eb9e4a;
+}
+.faq-item:hover {
+border-color: #eb9e4a;
+}
+.faq-question {
+transition: background 0.3s;
+}
+.faq-question:hover {
+background: rgba(235, 158, 74, 0.1) !important;
+}
+.faq-answer {
+border-top: 1px solid #e0e0e0;
+}
+@media (max-width: 768px) {
+.faq-question {
+font-size: 1rem !important;
+padding: 15px !important;
+}
+.faq-answer div {
+padding: 15px !important;
+}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -810,17 +838,6 @@ display: none !important;
 <section class="mission">
 <div class="container">
 <div class="mission-container">
-<div class="image-collage">
-<div class="image-collage-item">
-<img src="https://res.cloudinary.com/dmr1urhow/image/upload/v1752596723/4_20250715_172421_0000-min_yxn68j.jpg" alt="Students learning">
-</div>
-<div class="image-collage-item">
-<img src="https://res.cloudinary.com/dmr1urhow/image/upload/v1752596723/5_20250715_172421_0001-min_zlhkor.jpg" alt="Classroom activity">
-</div>
-<div class="image-collage-item">
-<img src="https://res.cloudinary.com/dmr1urhow/image/upload/v1752596723/6_20250715_172421_0002-min_hs0vpl.jpg" alt="School building">
-</div>
-</div>
 <div class="mission-content">
 <h2>Our Mission</h2>
 <p>"Inspiring our children to be passionate lifelong learners through a curriculum with pedagogical integrity, which allows them to always inquire, innovate, and contribute in meaningful way to the society."</p>
@@ -833,11 +850,109 @@ display: none !important;
 <div class="quoter-position">Founder</div>
 </div>
 </div>
+</div>  
+<div class="image-collage">
+<div class="image-collage-item">
+<img src="https://res.cloudinary.com/dmr1urhow/image/upload/v1752596723/4_20250715_172421_0000-min_yxn68j.jpg" alt="Students learning">
 </div>
+<div class="image-collage-item">
+<img src="https://res.cloudinary.com/dmr1urhow/image/upload/v1752596723/5_20250715_172421_0001-min_zlhkor.jpg" alt="Classroom activity">
+</div>
+<div class="image-collage-item">
+<img src="https://res.cloudinary.com/dmr1urhow/image/upload/v1752596723/6_20250715_172421_0002-min_hs0vpl.jpg" alt="School building">
+</div>
+</div>
+
 </div>
 </div>
 </section>
 </main>
+<section class="faq-section" style="background: #f8f8f8; padding: 80px 20px;">
+<div class="container">
+<h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; text-align: center; margin-bottom: 40px; color: #0c2d51;">Frequently Asked Questions</h2>
+<div class="faq-container">
+<div class="faq-item active">
+<button class="faq-question" style="background: none; border: none; width: 100%; text-align: left; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.125rem; color: #0c2d51;">
+<span>Is Springston Accredited?</span>
+<svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#0c2d51" style="transform: rotate(90deg);">
+<path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/>
+</svg>
+</button>
+<div class="faq-answer" style="padding: 0 20px; max-height: 500px; overflow: hidden; transition: max-height 0.3s ease-out; background: white;">
+<div style="padding: 20px; color: #666; line-height: 1.6;">
+<p>Yes, Springston International School is fully licensed and accredited in the Republic of Benin.</p>
+</div>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" style="background: none; border: none; width: 100%; text-align: left; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.125rem; color: #0c2d51;">
+<span>Is the School Multilingual?</span>
+<svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#0c2d51" style="transition: transform 0.3s;">
+<path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/>
+</svg>
+</button>
+<div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: white;">
+<div style="padding: 20px; color: #666; line-height: 1.6;">
+<p>Yes. While English and French are our primary languages of instruction, we expose our students to French and other languages to help them become confident global citizens.</p>
+</div>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" style="background: none; border: none; width: 100%; text-align: left; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.125rem; color: #0c2d51;">
+<span>What's the class size like?</span>
+<svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#0c2d51" style="transition: transform 0.3s;">
+<path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/>
+</svg>
+</button>
+<div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: white;">
+<div style="padding: 20px; color: #666; line-height: 1.6;">
+<p>We keep our classes small (15)—on purpose. It helps us give each child the attention they deserve and the space to grow at their own pace.</p>
+</div>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" style="background: none; border: none; width: 100%; text-align: left; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.125rem; color: #0c2d51;">
+<span>Is there a school bus service?</span>
+<svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#0c2d51" style="transition: transform 0.3s;">
+<path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/>
+</svg>
+</button>
+<div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: white;">
+<div style="padding: 20px; color: #666; line-height: 1.6;">
+<p>Yes. We offer a safe, reliable transportation service for families who need it. Ask us for available routes.</p>
+</div>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" style="background: none; border: none; width: 100%; text-align: left; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.125rem; color: #0c2d51;">
+<span>Can I visit the school before enrolling?</span>
+<svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#0c2d51" style="transition: transform 0.3s;">
+<path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/>
+</svg>
+</button>
+<div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: white;">
+<div style="padding: 20px; color: #666; line-height: 1.6;">
+<p>Absolutely. In fact, we encourage it. There's nothing like walking through the halls and seeing things for yourself.</p>
+</div>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" style="background: none; border: none; width: 100%; text-align: left; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.125rem; color: #0c2d51;">
+<span>What if my child is shy or struggling?</span>
+<svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#0c2d51" style="transition: transform 0.3s;">
+<path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/>
+</svg>
+</button>
+<div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: white;">
+<div style="padding: 20px; color: #666; line-height: 1.6;">
+<p>Then you're looking at the right school. We believe no child is too quiet, too behind, or too different to be understood.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
 <footer>
 <div class="container">
 <div class="footer-content">
@@ -927,6 +1042,22 @@ display: none !important;
 document.querySelector('.menu-icon').addEventListener('click', function() {
 this.classList.toggle('active');
 document.querySelector('.mobile-menu').classList.toggle('active');
+});
+document.querySelectorAll('.faq-question').forEach(button => {
+button.addEventListener('click', () => {
+const faqItem = button.parentElement;
+const answer = button.nextElementSibling;
+const icon = button.querySelector('.faq-icon');
+
+faqItem.classList.toggle('active');
+if (faqItem.classList.contains('active')) {
+answer.style.maxHeight = answer.scrollHeight + 'px';
+icon.style.transform = 'rotate(90deg)';
+} else {
+answer.style.maxHeight = '0';
+icon.style.transform = 'rotate(0)';
+}
+});
 });
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 </script>
